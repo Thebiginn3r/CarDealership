@@ -14,24 +14,12 @@ public class Dealership {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public String getPhone() {
         return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public Dealership(String name, String address, String phone) {
@@ -69,8 +57,8 @@ public class Dealership {
         return null;
     }
 
-    public void addVehicle (String vehicle){
-
+    public void addVehicle (Vehicle vehicle){
+        inventory.add(vehicle);
     }
 
     public void removeVehicle(String vehicle){
