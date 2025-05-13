@@ -22,6 +22,7 @@ public class UserInterface {
             System.out.println("5 to Search by mileage");
             System.out.println("6 to Search by Vehicle Type");
             System.out.println("7 to Search All Vehices");
+            System.out.print("Type your answer here: ");
 
             choice = scanner.nextInt();
             scanner.nextLine();
