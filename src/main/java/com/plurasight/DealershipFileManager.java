@@ -4,9 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class DealershipFileManager {
-    Dealership dealership = null;
+   private ArrayList<Vehicle> dealership = new ArrayList<Vehicle>();
     public void getDealership(){
         try {
             BufferedReader br = new BufferedReader(new FileReader("dealership.csv"));
@@ -23,7 +24,7 @@ public class DealershipFileManager {
                     int odometer = Integer.parseInt(parts[6]);
                     double price = Double.parseDouble(parts[7]);
                     Vehicle vehicle = new Vehicle(vin, year, make, model,vehicleType,color,odometer,price);
-                    dealership.addVehicle(vehicle);
+                    dealership.add(vehicle);//addVehicle(vehicle);
                     System.out.println(vehicle);
                 }
             }

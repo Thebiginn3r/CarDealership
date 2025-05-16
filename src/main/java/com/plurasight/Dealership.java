@@ -2,6 +2,7 @@ package com.plurasight;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Dealership {
     private ArrayList<Vehicle> inventory;
@@ -9,6 +10,15 @@ public class Dealership {
     private String name;
     private String address;
     private String phone;
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (Vehicle v : inventory){
+            sb.append(v.toString()).append("\n");
+        }
+        return sb.toString();
+    }
 
     public String getName() {
         return name;
@@ -26,11 +36,16 @@ public class Dealership {
         this.name = name;
         this.address = address;
         this.phone = phone;
-        //vehicle = new ArrayList<>();
+        this.inventory = new ArrayList<>();
     }
 
     public List<Vehicle> getVehiclesByPrice (double min, double max) {
-        return null;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the min price");
+        min = scanner.nextInt();
+        System.out.println("Enter the max price");
+        max = scanner.nextInt();
+        return List.of();
     }
 
     public List<Vehicle> getVehiclesByMakeModel (String make, String model){
